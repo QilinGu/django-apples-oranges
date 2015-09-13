@@ -1,0 +1,7 @@
+.result-link{
+	opacity:0.5;
+}
+
+.result-link:hover{
+	opacity:1;
+}
