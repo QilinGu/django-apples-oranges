@@ -16,32 +16,32 @@ from common import  *
 INSTALLED_APPS += (
     # Mandrill email app integration:
     # https://djrill.readthedocs.org/en/latest/
-    'djrill',
+	# 'djrill',
 )
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
-EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+#EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-host
-EMAIL_HOST = environ.get('EMAIL_HOST', 'smtp.mandrillapp.com')
+#EMAIL_HOST = environ.get('EMAIL_HOST', 'smtp.mandrillapp.com')
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-host-password
-EMAIL_HOST_PASSWORD = environ.get('MANDRILL_APIKEY', '')
+#EMAIL_HOST_PASSWORD = environ.get('MANDRILL_APIKEY', '')
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-host-user
-EMAIL_HOST_USER = environ.get('MANDRILL_USERNAME', 'your_email@example.com')
+#EMAIL_HOST_USER = environ.get('MANDRILL_USERNAME', 'your_email@example.com')
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-port
-EMAIL_PORT = environ.get('EMAIL_PORT', 587)
+#EMAIL_PORT = environ.get('EMAIL_PORT', 587)
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-subject-prefix
-EMAIL_SUBJECT_PREFIX = '[showlike] '
+#EMAIL_SUBJECT_PREFIX = '[showlike] '
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#email-use-tls
-EMAIL_USE_TLS = True
+#EMAIL_USE_TLS = True
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#server-email
-SERVER_EMAIL = EMAIL_HOST_USER
+#SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
 
