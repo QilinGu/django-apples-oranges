@@ -4,10 +4,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'showlike.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
 	url(r'^$', views.home, name='home'),
 	url(r'^search', views.search, name='search'),
     url(r'^admin/', include(admin.site.urls)),
