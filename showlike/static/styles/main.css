@@ -5,3 +5,9 @@
 .result-link:hover{
 	opacity:1;
 }
+
+iframe{
+	width:100%;
+	height:auto;
+	min-height:300px;
+}

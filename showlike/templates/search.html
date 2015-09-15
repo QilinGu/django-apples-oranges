@@ -63,18 +63,18 @@
 		    	{{ result.Name }}
 		    </td>
 		    <td>
-		    	<a class="result-link" target="_blank" href="{{ result.wUrl}}">
-		    		<i class="fa fa-wikipedia-w fa-lg" style="color: #666666;"></i>
+		    	<a href="{{ result.wUrl }}" target="_blank" class="btn btn-link">
+		    		<i class="fa fa-wikipedia-w fa-lg"></i>
 		    	</a>
 		    </td>
 		    <td>
-		    	<a class="result-link" target="_blank" href="{{ result.yUrl }}" style="color: #CC0000;">
+		    	<button data-target="#{{forloop.counter}}y" data-toggle="modal" class="btn btn-link" type="button">
 		    		<i class="fa fa-youtube fa-lg"></i>
-		    	</a>
+		    	</button>
 		    </td>
 		    <td>
-		    	<button data-target="#{{forloop.counter}}" data-toggle="modal" class="btn btn-default" type="button">
-		    		More
+		    	<button data-target="#{{forloop.counter}}" data-toggle="modal" class="btn btn-link" type="button">
+		    		<i class="fa fa-info-circle fa-lg"></i>
 		    	</button>
 		    </td>
 		  </tr>
@@ -92,6 +92,22 @@
 		      </div>
 		      <div class="modal-body">
 		        <p>{{ result.wTeaser }}</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal fade" id="{{ forloop.counter }}y">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">{{ result.Name }}</h4>
+		      </div>
+		      <div class="modal-body">
+		        <iframe type="text/html" src="{{ result.yUrl }}"/>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
